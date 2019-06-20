@@ -31,24 +31,32 @@
 </head>
 
 <body>
-    <div class="col-lg">
-        <div class="row form-group" style="margin: 5px">
-            <!--Textarea with icon prefix-->
-            <h3><i class="fa fa-pencil"></i></h3>
-            <h4><label for="input">Copy-paste the string to escape or unescape here</label></h4>
-            <textarea id="input" class="form-control"></textarea>
+        <div class="col-lg">
+            <div class="row form-group" style="margin: 5px">
+                <!--Textarea with icon prefix-->
+                <h3><i class="fa fa-pencil"></i></h3>
+                <h4><label for="input">Copy-paste the string to escape or unescape here</label></h4>
+                <button type="button" class="btn btn-secondary" onclick="clear_input()"
+                style="margin-right:10px;margin-left: auto;height:fit-content;">Clear</button>
+                <textarea id="input" class="form-control"></textarea>
+            </div>
+            <br>
+            <div class="row" style="margin: 5px">
+                <button type="button" class="btn btn-warning" onclick="escape()"
+                    style="margin-left:auto;margin-right: 10px">Escape</button>
+                <button type="button" class="btn btn-warning" onclick="unescape()"
+                    style="margin-right:10px;margin-left: 10px">UnEscape</button>
+                <button type="button" class="btn btn-warning" onclick="pretty_json()"
+                    style="margin-left:10px;margin-right: auto">Pretty Json</button>
+            </div>
+            <div class="row form-group" style="margin: 5px;white-space:pre-wrap">
+                <h3><i class="fa fa-file-text-o"></i></h3>
+                <h4><label for="output" id="output_label"></label></h4>
+                <button type="button" class="btn btn-secondary" onclick="use_as_input()"
+                style="margin-right:10px;margin-left: auto;height:fit-content;">Use as Input</button>
+                <textarea id="output" class="form-control"></textarea>
+            </div>
         </div>
-        <br>
-        <div class="row" style="margin: 5px">
-            <button type="button" class="btn btn-warning" onclick="escape()" style="margin-left:auto;margin-right: 10px">Escape</button>
-            <button type="button" class="btn btn-warning" onclick="unescape()" style="margin-right:auto;margin-left: 10px">UnEscape</button>
-        </div>
-        <div class="row form-group" style="margin: 5px">
-            <h3><i class="fa fa-file-text-o"></i></h3>
-            <h4><label for="output" id="output_label"></label></h4>
-            <textarea id="output" class="form-control"></textarea>
-        </div>
-    </div>
-</body>
+    </body>
 
 </html>
