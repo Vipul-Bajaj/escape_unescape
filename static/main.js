@@ -81,6 +81,10 @@ function clear_input(){
     document.getElementById("input").value = ""
 }
 
+function clear_output(){
+    document.getElementById("output").value = ""
+}
+
 function use_as_input(){
     document.getElementById("input").value = document.getElementById("output").value
 }
